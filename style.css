@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright--Yellow: hsl(71, 73%, 54%);
+    --Light--Gray: hsl(204, 43%, 93%);
+    --Grayish--Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Light--Gray);
+    font-family: 'Karla', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 475px;
+    width: 635px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 10px 20px -8px var(--Grayish--Blue);
+}
+
+.info {
+    padding: 41px;
+}
+
+.info--1 {
+    flex: 100%;
+    border-radius: 0 0 0 5px;
+    height: 216px;
+}
+
+.info--1 .info__heading {
+    color: var(--Bright--Yellow);
+    margin-bottom: 15px;
+}
+
+.info--1 .info__desc {
+    color: var(--Grayish--Blue);
+    line-height: 26px;
+}
+
+.heading--top {
+    font-size: 1.4375em;
+    font-weight: 700;
+    color: var(--Cyan);
+    margin-bottom: 25px;
+}
+
+.info--2 {
+    flex: 50%;
+    max-width: 50%;
+    background-color: var(--Cyan);
+    height: 259px;
+    border-radius: 0 0 0 5px;
+}
+
+.info--2 .info__desc {
+    font-size: 0.9375em;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.875em;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.price span {
+    font-weight: 400;
+    font-size: 0.9375em;
+    color: var(--Light--Gray);
+    padding-left: 12px;
+}
+
+.info--3 {
+    flex: 50%;
+    max-width: 50%;
+    height: 259px;
+    background-color: var(--Cyan);
+    border-radius: 0 0 5px 0;
+    opacity: 0.83;
+}
+
+.info--3 .info__desc {
+    line-height: 21px;
+    font-size: 0.875em;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    margin-top: 30px;
+    background-color: var(--Bright--Yellow);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 15px 10px #0000001c;
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.info__heading {
+    font-size: 1.0625em;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.info__desc {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--Light--Gray);
+}
+
+@media (max-width: 740px) {
+    .card {
+        width: 311px;
+        height: 722px;
+    }
+
+    .info--1,
+    .info--2,
+    .info--3 {
+        padding: 25px;
+    }
+
+    .info--1 {
+        height: 267px;
+    }
+
+    .card p.info__desc {
+        font-size: 0.8125em;
+    }
+
+    .heading--top {
+        font-size: 1.25em;
+    }
+
+    .price {
+        font-size: 1.5625em;
+    }
+
+    .price span {
+        font-size: 0.875em;
+    }
+
+    .info--2 {
+        flex: 100%;
+        min-width: 100%;
+        border-radius: 0;
+        height: 228px;
+    }
+
+    .info--3 {
+        flex: 100%;
+        min-width: 100%;
+        border-radius: 0 0 5px 5px;
+        height: 227px;
+    }
+
+    .info__heading {
+        font-size: 1em;
+    }
+}
